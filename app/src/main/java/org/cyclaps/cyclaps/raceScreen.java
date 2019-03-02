@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class raceScreen extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class raceScreen extends AppCompatActivity {
 
         wv = (WebView) findViewById(R.id.mwebView);
         wv.getSettings().setJavaScriptEnabled(true);
+        wv.setWebViewClient(new WebViewClient());
         wv.loadUrl("http://mobilehci.s3-website.eu-west-2.amazonaws.com/race.html");
     }
 
